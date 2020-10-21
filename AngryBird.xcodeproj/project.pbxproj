@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		8B6CE1CA253BB437008681C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6CE1C9253BB437008681C2 /* AppDelegate.swift */; };
 		8B6CE1CC253BB437008681C2 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8B6CE1CB253BB437008681C2 /* GameScene.sks */; };
-		8B6CE1CE253BB437008681C2 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8B6CE1CD253BB437008681C2 /* Actions.sks */; };
 		8B6CE1D0253BB437008681C2 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6CE1CF253BB437008681C2 /* GameScene.swift */; };
 		8B6CE1D2253BB437008681C2 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6CE1D1253BB437008681C2 /* GameViewController.swift */; };
 		8B6CE1D5253BB437008681C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B6CE1D3253BB437008681C2 /* Main.storyboard */; };
 		8B6CE1D7253BB439008681C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B6CE1D6253BB439008681C2 /* Assets.xcassets */; };
+		8B6CE1E2253BB7EF008681C2 /* BirdTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8B6CE1E1253BB7EF008681C2 /* BirdTileSet.sks */; };
+		8BFCB637253BC11700441B17 /* GameCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFCB636253BC11700441B17 /* GameCamera.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8B6CE1C6253BB437008681C2 /* AngryBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AngryBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B6CE1C9253BB437008681C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B6CE1CB253BB437008681C2 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		8B6CE1CD253BB437008681C2 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		8B6CE1CF253BB437008681C2 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		8B6CE1D1253BB437008681C2 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		8B6CE1D4253BB437008681C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B6CE1D6253BB439008681C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B6CE1D8253BB439008681C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B6CE1E1253BB7EF008681C2 /* BirdTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BirdTileSet.sks; sourceTree = "<group>"; };
+		8BFCB636253BC11700441B17 /* GameCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCamera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,65 @@
 		8B6CE1C8253BB437008681C2 /* AngryBird */ = {
 			isa = PBXGroup;
 			children = (
-				8B6CE1C9253BB437008681C2 /* AppDelegate.swift */,
-				8B6CE1CB253BB437008681C2 /* GameScene.sks */,
-				8B6CE1CD253BB437008681C2 /* Actions.sks */,
-				8B6CE1CF253BB437008681C2 /* GameScene.swift */,
-				8B6CE1D1253BB437008681C2 /* GameViewController.swift */,
-				8B6CE1D3253BB437008681C2 /* Main.storyboard */,
-				8B6CE1D6253BB439008681C2 /* Assets.xcassets */,
+				8BFCB635253BC0FD00441B17 /* Custom Node */,
 				8B6CE1D8253BB439008681C2 /* Info.plist */,
+				8B6CE1EB253BBCC4008681C2 /* Tileset */,
+				8B6CE1EA253BBCAC008681C2 /* UI */,
+				8B6CE1E8253BBC6B008681C2 /* Scenes */,
+				8B6CE1E7253BBC63008681C2 /* ViewController */,
+				8B6CE1E6253BBC56008681C2 /* Template */,
 			);
 			path = AngryBird;
+			sourceTree = "<group>";
+		};
+		8B6CE1E6253BBC56008681C2 /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				8B6CE1C9253BB437008681C2 /* AppDelegate.swift */,
+			);
+			path = Template;
+			sourceTree = "<group>";
+		};
+		8B6CE1E7253BBC63008681C2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8B6CE1D1253BB437008681C2 /* GameViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8B6CE1E8253BBC6B008681C2 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8B6CE1CF253BB437008681C2 /* GameScene.swift */,
+				8B6CE1CB253BB437008681C2 /* GameScene.sks */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		8B6CE1EA253BBCAC008681C2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8B6CE1D3253BB437008681C2 /* Main.storyboard */,
+				8B6CE1D6253BB439008681C2 /* Assets.xcassets */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8B6CE1EB253BBCC4008681C2 /* Tileset */ = {
+			isa = PBXGroup;
+			children = (
+				8B6CE1E1253BB7EF008681C2 /* BirdTileSet.sks */,
+			);
+			path = Tileset;
+			sourceTree = "<group>";
+		};
+		8BFCB635253BC0FD00441B17 /* Custom Node */ = {
+			isa = PBXGroup;
+			children = (
+				8BFCB636253BC11700441B17 /* GameCamera.swift */,
+			);
+			path = "Custom Node";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +179,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B6CE1D5253BB437008681C2 /* Main.storyboard in Resources */,
+				8B6CE1E2253BB7EF008681C2 /* BirdTileSet.sks in Resources */,
 				8B6CE1CC253BB437008681C2 /* GameScene.sks in Resources */,
 				8B6CE1D7253BB439008681C2 /* Assets.xcassets in Resources */,
-				8B6CE1CE253BB437008681C2 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +194,7 @@
 			files = (
 				8B6CE1D0253BB437008681C2 /* GameScene.swift in Sources */,
 				8B6CE1D2253BB437008681C2 /* GameViewController.swift in Sources */,
+				8BFCB637253BC11700441B17 /* GameCamera.swift in Sources */,
 				8B6CE1CA253BB437008681C2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
