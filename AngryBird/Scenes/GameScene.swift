@@ -16,18 +16,61 @@ class GameScene: SKScene {
     var pinchRecognizer = UIPinchGestureRecognizer()
     var maxScale:CGFloat = 0.0
     
+    var bird = Bird(type: .red)
+    let anchor = SKNode()
+    
+    
     override func didMove(to view: SKView) {
         //addCamera()
         setupLevel()
         setupGestureRecognizer()
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            let location = touch.location(in: self)
+            // check if the touch is on the spritenode or not
+            if bird.contains(location) {
+                panRecognizer.isEnabled = false
+                bird.grabbed = true
+                bird.position = location
+            }
+        }
+    }
     
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            if bird.grabbed {
+                let location = touch.location(in: self)
+                bird.position = location
+            }
+            
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if bird.grabbed {
+            bird.grabbed = false
+            launchBird()
+        }
+    }
+    
+    func launchBird() {
+        
+    }
     func setupLevel() {
         if let safeMapNode = childNode(withName: "Tile Map Node") as? SKTileMapNode {
             self.mapNode = safeMapNode
-            maxScale = safeMapNode.mapSize.height/frame.size.height
+            maxScale = safeMapNode.mapSize.width/frame.size.width
         }
         addCamera()
+        anchor.position = CGPoint(x: mapNode.frame.midX/2, y: mapNode.frame.midY/2)
+        addChild(anchor)
+        addBird()
+    }
+    
+    func addBird() {
+        bird.position = anchor.position
+        addChild(bird)
     }
         
     func addCamera() {
@@ -83,9 +126,16 @@ extension GameScene {
                     gameCamera.setScale(newScale)
                 }
                 let locationAfterScale = convertPoint(fromView: locationInView)
-                let locationDelta = CGPoint(x: location.x - locationAfterScale.x, y: location.y - locationAfterScale.y)
+                
+                
+               // let locationDelta = CGPoint(x: location.x - locationAfterScale.x, y: location.y - locationAfterScale.y)
+                
+                let locationDelta = location - locationAfterScale
+                
                 // new position for camera. after zoom and pinch
-                let newPosition = CGPoint(x: gameCamera.position.x+locationDelta.x , y: gameCamera.position.y+locationDelta.y)
+                //let newPosition = CGPoint(x: gameCamera.position.x+locationDelta.x , y: gameCamera.position.y+locationDelta.y)
+                
+                let newPosition = gameCamera.position + locationDelta
                 gameCamera.position = newPosition
                 //next pinch will use base scale = 1 again
                 sender.scale = 1.0

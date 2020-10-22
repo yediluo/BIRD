@@ -15,6 +15,7 @@
 		8B6CE1D5253BB437008681C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B6CE1D3253BB437008681C2 /* Main.storyboard */; };
 		8B6CE1D7253BB439008681C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B6CE1D6253BB439008681C2 /* Assets.xcassets */; };
 		8B6CE1E2253BB7EF008681C2 /* BirdTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8B6CE1E1253BB7EF008681C2 /* BirdTileSet.sks */; };
+		8BB07E2425424856002B15AA /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB07E2325424856002B15AA /* Bird.swift */; };
 		8BFCB637253BC11700441B17 /* GameCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFCB636253BC11700441B17 /* GameCamera.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		8B6CE1D6253BB439008681C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B6CE1D8253BB439008681C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B6CE1E1253BB7EF008681C2 /* BirdTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BirdTileSet.sks; sourceTree = "<group>"; };
+		8BB07E2325424856002B15AA /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
 		8BFCB636253BC11700441B17 /* GameCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCamera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 				8B6CE1E8253BBC6B008681C2 /* Scenes */,
 				8B6CE1E7253BBC63008681C2 /* ViewController */,
 				8B6CE1E6253BBC56008681C2 /* Template */,
+				8BB07E2325424856002B15AA /* Bird.swift */,
 			);
 			path = AngryBird;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				8B5E7D46253FBC8700C8E6FA /* Configurations.swift in Sources */,
 				8B6CE1D2253BB437008681C2 /* GameViewController.swift in Sources */,
 				8BFCB637253BC11700441B17 /* GameCamera.swift in Sources */,
+				8BB07E2425424856002B15AA /* Bird.swift in Sources */,
 				8B6CE1CA253BB437008681C2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
